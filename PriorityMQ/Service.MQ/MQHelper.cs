@@ -2,6 +2,7 @@
 using EasyNetQ.Topology;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Service.MQ
@@ -19,11 +20,44 @@ namespace Service.MQ
         /// <param name="adbus"></param>
         /// <param name="queueName"></param>
         /// <returns></returns>
-        private IQueue CreateQueue(IAdvancedBus adbus, string queueName = "",int? maxPriority = null)
+        private IQueue CreateQueue(IAdvancedBus adbus, string queueName = "", int? maxPriority = null)
         {
             if (adbus == null) return null;
             if (string.IsNullOrEmpty(queueName)) return adbus.QueueDeclare();
-            return adbus.QueueDeclare(name: queueName,maxPriority: maxPriority);
+            return adbus.QueueDeclare(name: queueName, maxPriority: maxPriority);
+        }
+
+        /// <summary>
+        /// 消息上报(使用同一信道)
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <param name="msg"></param>
+        /// <param name="exChangeName"></param>
+        /// <param name="routingKey"></param>
+        /// <param name="priority"></param>
+        /// <returns></returns>
+        public bool SendMsgBase<T>(IEnumerable<T> t, out string msg, string exChangeName, string routingKey, int priority = 0) where T : class
+        {
+            msg = string.Empty;
+            try
+            {
+                using (var bus = CreateMessageBus())
+                {
+                    var adbus = bus.Advanced;
+                    var exchange = adbus.ExchangeDeclare(exChangeName, ExchangeType.Fanout);
+                    foreach (var item in t)
+                    {
+                        adbus.Publish(exchange, routingKey, false, new Message<T>(item, new MessageProperties() { Priority = (byte)priority }));
+                    }
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                msg = ex.ToString();
+                return false;
+            }
         }
         #endregion
 
@@ -61,7 +95,7 @@ namespace Service.MQ
         /// <param name="t">消息命名</param>
         /// <param name="msg">错误信息</param>
         /// <returns></returns>
-        public bool FanoutPush<T>(T t, out string msg, string exChangeName = "fanout_mq", string routingKey = "",int priority=0) where T : class
+        public bool FanoutPush<T>(T t, out string msg, string exChangeName = "fanout_mq", string routingKey = "", int priority = 0) where T : class
         {
             msg = string.Empty;
             try
@@ -70,7 +104,7 @@ namespace Service.MQ
                 {
                     var adbus = bus.Advanced;
                     var exchange = adbus.ExchangeDeclare(exChangeName, ExchangeType.Fanout);
-                    adbus.Publish(exchange, routingKey, false, new Message<T>(t,new MessageProperties() { Priority= (byte)priority }));
+                    adbus.Publish(exchange, routingKey, false, new Message<T>(t, new MessageProperties() { Priority = (byte)priority }));
                     return true;
                 }
             }
@@ -291,7 +325,7 @@ namespace Service.MQ
         /// <param name="msg">错误信息</param>
         /// <param name="exChangeName">交换器名</param>
         /// <returns></returns>
-        public bool TopicSub<T>(T t, string topic, out string msg, string exChangeName = "topic_mq",int priority=0) where T : class
+        public bool TopicSub<T>(T t, string topic, out string msg, string exChangeName = "topic_mq", int priority = 0) where T : class
         {
             msg = string.Empty;
             try

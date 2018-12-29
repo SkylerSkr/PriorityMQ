@@ -1,0 +1,6 @@
+C:\Users\10563\source\repos\PriorityMQ\Service.Mail\bin\Debug\Service.Mail.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.Mail\bin\Debug\Service.Mail.pdb
+C:\Users\10563\source\repos\PriorityMQ\Service.Mail\obj\Debug\Service.Mail.csproj.CoreCompileInputs.cache
+C:\Users\10563\source\repos\PriorityMQ\Service.Mail\obj\Debug\Service.Mail.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.Mail\obj\Debug\Service.Mail.pdb
+C:\Users\10563\source\repos\PriorityMQ\Service.Mail\obj\Debug\Service.Mail.csprojAssemblyReference.cache

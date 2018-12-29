@@ -1,0 +1,14 @@
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\Service.MQ.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\Service.MQ.pdb
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\EasyNetQ.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\Newtonsoft.Json.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\RabbitMQ.Client.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.xml
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\Newtonsoft.Json.xml
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\bin\Debug\RabbitMQ.Client.xml
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\obj\Debug\Service.MQ.csprojAssemblyReference.cache
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\obj\Debug\Service.MQ.csproj.CoreCompileInputs.cache
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\obj\Debug\Service.MQ.csproj.CopyComplete
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\obj\Debug\Service.MQ.dll
+C:\Users\10563\source\repos\PriorityMQ\Service.MQ\obj\Debug\Service.MQ.pdb

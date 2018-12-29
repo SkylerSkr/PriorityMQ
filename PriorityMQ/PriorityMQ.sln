@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.MQ", "Service.MQ\Service.MQ.csproj", "{094E6985-C165-412E-B681-B0E99AEFE666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Mail", "Service.Mail\Service.Mail.csproj", "{00224D87-8C9C-4A14-80C6-69209FD6B038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D6B867AB-1409-4CDB-AC51-E1B7A6FBC58E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{094E6985-C165-412E-B681-B0E99AEFE666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094E6985-C165-412E-B681-B0E99AEFE666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094E6985-C165-412E-B681-B0E99AEFE666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094E6985-C165-412E-B681-B0E99AEFE666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00224D87-8C9C-4A14-80C6-69209FD6B038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00224D87-8C9C-4A14-80C6-69209FD6B038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00224D87-8C9C-4A14-80C6-69209FD6B038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00224D87-8C9C-4A14-80C6-69209FD6B038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B867AB-1409-4CDB-AC51-E1B7A6FBC58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B867AB-1409-4CDB-AC51-E1B7A6FBC58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B867AB-1409-4CDB-AC51-E1B7A6FBC58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B867AB-1409-4CDB-AC51-E1B7A6FBC58E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94F83F9D-C083-4877-A4B5-2166CF87CD18}
+	EndGlobalSection
+EndGlobal
